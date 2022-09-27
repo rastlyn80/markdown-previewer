@@ -5,8 +5,12 @@ import Prism from "prism";
 class Previewer extends React.Component {
   constructor(props) {
     super(props);
+    const renderer = new marked.Renderer();
+    renderer.link = function (href, title, text) {
+      return `<a target="_blank" href="${href}">${text}</a>`;
+    };
     marked.setOptions({
-      renderer: new marked.Renderer(),
+      renderer: renderer,
       breaks: true,
       highlight: function (code) {
         return Prism.highlight(code, Prism.languages.javascript, "javascript");
@@ -24,7 +28,7 @@ class Previewer extends React.Component {
           id="preview"
           dangerouslySetInnerHTML={{
             __html: marked.parse(this.props.previewContent, {
-              renderer: new marked.Renderer(),
+              renderer: this.renderer,
             }),
           }}
         />
