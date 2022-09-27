@@ -5,3 +5,21 @@
   --black-shadows: #bfb6bbff;
   --tuscany: #c49799ff;
 }
+
+body {
+  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  background-color: var(--black-shadows);
+  color: var(--onyx);
+}
+
+.container {
+  height: 20vh;
+  width: 80%;
+  margin: 0 auto;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
