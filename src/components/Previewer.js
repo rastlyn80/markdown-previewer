@@ -16,14 +16,19 @@ class Previewer extends React.Component {
 
   render() {
     return (
-      <div
-        id="preview"
-        dangerouslySetInnerHTML={{
-          __html: marked.parse(this.props.previewContent, {
-            renderer: new marked.Renderer(),
-          }),
-        }}
-      />
+      <div className="section">
+        <div className="header">
+          <div className="caption">Preview</div>
+        </div>
+        <div
+          id="preview"
+          dangerouslySetInnerHTML={{
+            __html: marked.parse(this.props.previewContent, {
+              renderer: new marked.Renderer(),
+            }),
+          }}
+        />
+      </div>
     );
   }
 }

@@ -7,7 +7,10 @@ class Editor extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="section">
+        <div className="header">
+          <div className="caption">Editor</div>
+        </div>
         <textarea
           onChange={this.processChange}
           value={this.props.textContent}
