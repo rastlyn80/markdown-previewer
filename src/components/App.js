@@ -18,7 +18,7 @@ class App extends React.Component {
           textContent={this.state.currentMarkdown}
           processChange={this.processChange}
         />
-        <Previewer />
+        <Previewer previewContent={this.state.currentMarkdown} />
       </div>
     );
   }
