@@ -1,6 +1,7 @@
 import React from "react";
 import Editor from "./Editor";
 import Previewer from "./Previewer";
+import Credits from "./Credits";
 import { defaultText } from "./content/defaultText";
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
           processChange={this.processChange}
         />
         <Previewer previewContent={this.state.currentMarkdown} />
+        <Credits />
       </div>
     );
   }

@@ -35,7 +35,8 @@ textarea {
   border: 1px solid var(--onyx);
   background-color: var(--light-blue);
 }
-.header {
+.header,
+.credits {
   width: 100%;
   height: 40px;
   font-size: 0.8em;
@@ -69,4 +70,19 @@ textarea {
   width: auto;
   max-width: 300px;
   max-height: 300px;
+}
+
+.credits {
+  width: 60%;
+  line-height: 23px;
+  text-align: center;
+  font-size: 0.8em;
+  margin: auto;
+  margin-bottom: 0px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.credits a {
+  text-decoration: none;
+  color: var(--onyx);
 }
