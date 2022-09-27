@@ -1,20 +1,12 @@
 import React from "react";
-import { marked, renderer } from "marked";
-import Prism from "prism";
+import { marked } from "marked";
 
 class Previewer extends React.Component {
   constructor(props) {
     super(props);
-    const renderer = new marked.Renderer();
-    renderer.link = function (href, title, text) {
-      return `<a target="_blank" href="${href}">${text}</a>`;
-    };
+
     marked.setOptions({
-      renderer: renderer,
       breaks: true,
-      highlight: function (code) {
-        return Prism.highlight(code, Prism.languages.javascript, "javascript");
-      },
     });
   }
 

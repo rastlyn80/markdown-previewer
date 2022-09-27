@@ -8,12 +8,12 @@ This is a subheading element
 
 We also have some \`var = Inline Code\` like this!
 
-\`
+\`\`\`
 // Some proper code here
 function helloWorld = () => {
    console.log("Hello world!");
 }
-\`
+\`\`\`
 
 
 
